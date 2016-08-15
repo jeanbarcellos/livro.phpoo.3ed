@@ -1,0 +1,6 @@
+2016-08-14 21:29:45 :: Protegendo o acesso à um produto
+2016-08-14 21:29:45 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:29:53 :: Protegendo o acesso à um produto
+2016-08-14 21:29:53 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:29:53 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:29:53 :: UPDATE produto SET descricao = 'HD 120 GB', estoque = '2', preco_custo = '100', preco_venda = '180', codigo_barras = '0000000002', data_cadastro = '2015-01-01', origem = 'N' WHERE id=2;

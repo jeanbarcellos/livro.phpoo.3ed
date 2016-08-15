@@ -1,0 +1,31 @@
+2016-08-14 21:10:50 :: Inserindo produto novo
+2016-08-14 21:10:50 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:10:50 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-14', 'N', 11);
+2016-08-14 21:10:51 :: Inserindo produto novo
+2016-08-14 21:10:51 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:10:51 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-14', 'N', 12);
+2016-08-14 21:10:51 :: Inserindo produto novo
+2016-08-14 21:10:51 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:10:51 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-14', 'N', 13);
+2016-08-14 21:11:28 :: Inserindo produto novo
+2016-08-14 21:11:28 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:28 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-14', 'N', 14);
+2016-08-14 21:11:38 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:38 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 15);
+2016-08-14 21:11:38 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:38 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 16);
+2016-08-14 21:11:38 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:38 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 17);
+2016-08-14 21:11:38 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:38 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 18);
+2016-08-14 21:11:39 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:39 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:39 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 19);
+2016-08-14 21:11:39 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 20);
+2016-08-14 21:11:48 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:48 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 21);
+2016-08-14 21:11:51 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:11:51 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-15', 'N', 22);
+2016-08-14 21:27:10 :: Inserindo produto novo
+2016-08-14 21:27:10 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:27:10 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Cerveja artesanal IPA', 50, 8, 12, '75363453234234', '2016-08-14', 'N', 25);

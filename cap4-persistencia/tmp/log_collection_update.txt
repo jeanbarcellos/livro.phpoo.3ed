@@ -1,0 +1,5 @@
+2016-08-14 21:59:07 :: SELECT * FROM produto WHERE (preco_venda <= 35 AND origem = 'N');
+2016-08-14 21:59:07 :: SELECT * FROM produto WHERE id=22;
+2016-08-14 21:59:07 :: UPDATE produto SET descricao = 'MOUSE PS2 A7 AZUL/PLATA', estoque = '20', preco_custo = '5', preco_venda = 25.35, codigo_barras = '0000000022', data_cadastro = '2015-01-01', origem = 'N' WHERE id=22;
+2016-08-14 21:59:07 :: SELECT * FROM produto WHERE id=25;
+2016-08-14 21:59:07 :: UPDATE produto SET descricao = 'Cerveja artesanal IPA', estoque = '50', preco_custo = '8', preco_venda = 20.28, codigo_barras = '75363453234234', data_cadastro = '2016-08-14', origem = 'N' WHERE id=25;

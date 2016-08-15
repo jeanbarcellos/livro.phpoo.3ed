@@ -1,0 +1,7 @@
+api - 
+model - 
+
+ar  - Active Record
+dm  - Data Mapper
+rgd - Row Data Getway
+tdg - Table Data Getway

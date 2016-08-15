@@ -1,0 +1,4 @@
+2016-08-14 20:24:38 :: Inserindo produto novo
+2016-08-14 20:24:38 :: INSERT INTO produto (id, descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem) VALUES ('7', 'Chocolate amargo', '80', '4', '7', '68323453234234', '2016-08-14', 'N')
+2016-08-14 20:25:11 :: Inserindo produto novo
+2016-08-14 20:25:11 :: INSERT INTO produto (id, descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem) VALUES ('8', 'Chocolate amargo', '80', '4', '7', '68323453234234', '2016-08-14', 'N')

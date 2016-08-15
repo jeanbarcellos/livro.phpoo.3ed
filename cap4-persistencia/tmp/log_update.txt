@@ -1,0 +1,16 @@
+2016-08-14 21:13:53 :: Alterando um produto
+2016-08-14 21:13:53 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:53 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:53 :: UPDATE produto SET descricao = 'Vinho Brasileiro Tinto Merlot', estoque = 30, preco_custo = '12.0', preco_venda = '18.0', codigo_barras = '13523453234234', data_cadastro = '2016-08-14', origem = 'N' WHERE id=2;
+2016-08-14 21:13:56 :: Alterando um produto
+2016-08-14 21:13:56 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:56 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:56 :: UPDATE produto SET descricao = 'Vinho Brasileiro Tinto Merlot', estoque = 40, preco_custo = '12.0', preco_venda = '18.0', codigo_barras = '13523453234234', data_cadastro = '2016-08-14', origem = 'N' WHERE id=2;
+2016-08-14 21:13:57 :: Alterando um produto
+2016-08-14 21:13:57 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:57 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:57 :: UPDATE produto SET descricao = 'Vinho Brasileiro Tinto Merlot', estoque = 50, preco_custo = '12.0', preco_venda = '18.0', codigo_barras = '13523453234234', data_cadastro = '2016-08-14', origem = 'N' WHERE id=2;
+2016-08-14 21:13:58 :: Alterando um produto
+2016-08-14 21:13:58 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:58 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:13:58 :: UPDATE produto SET descricao = 'Vinho Brasileiro Tinto Merlot', estoque = 60, preco_custo = '12.0', preco_venda = '18.0', codigo_barras = '13523453234234', data_cadastro = '2016-08-14', origem = 'N' WHERE id=2;

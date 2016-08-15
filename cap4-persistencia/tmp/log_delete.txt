@@ -1,0 +1,11 @@
+2016-08-14 21:17:58 :: Removendo um produto
+2016-08-14 21:17:58 :: SELECT * FROM produto WHERE id=8;
+2016-08-14 21:18:00 :: Removendo um produto
+2016-08-14 21:18:00 :: SELECT * FROM produto WHERE id=8;
+2016-08-14 21:18:55 :: Removendo um produto
+2016-08-14 21:18:55 :: SELECT * FROM produto WHERE id=8;
+2016-08-14 21:18:55 :: Removendo um produto
+2016-08-14 21:18:55 :: SELECT * FROM produto WHERE id=8;
+2016-08-14 21:19:02 :: Removendo um produto
+2016-08-14 21:19:02 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:19:02 :: DELETE FROM produto WHERE id=2;

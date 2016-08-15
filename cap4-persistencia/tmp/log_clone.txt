@@ -1,0 +1,68 @@
+2016-08-14 21:15:57 :: Clonando um produto
+2016-08-14 21:15:57 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:15:57 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:15:57 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 26);
+2016-08-14 21:18:47 :: Clonando um produto
+2016-08-14 21:18:47 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:47 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:47 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 27);
+2016-08-14 21:18:49 :: Clonando um produto
+2016-08-14 21:18:49 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:49 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:49 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 28);
+2016-08-14 21:18:49 :: Clonando um produto
+2016-08-14 21:18:49 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:49 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:49 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 29);
+2016-08-14 21:18:49 :: Clonando um produto
+2016-08-14 21:18:49 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:49 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:49 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 30);
+2016-08-14 21:18:49 :: Clonando um produto
+2016-08-14 21:18:49 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:50 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:50 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 31);
+2016-08-14 21:18:50 :: Clonando um produto
+2016-08-14 21:18:50 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:50 :: Clonando um produto
+2016-08-14 21:18:50 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:50 :: SELECT * FROM produto WHERE id=2;
+toque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 32);
+2016-08-14 21:18:50 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:50 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 32);
+2016-08-14 21:18:50 :: Clonando um produto
+2016-08-14 21:18:50 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:50 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:50 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 33);
+2016-08-14 21:18:50 :: Clonando um produto
+2016-08-14 21:18:50 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:50 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:50 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 34);
+2016-08-14 21:18:50 :: Clonando um produto
+2016-08-14 21:18:50 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:50 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:50 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 35);
+2016-08-14 21:18:51 :: Clonando um produto
+2016-08-14 21:18:51 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:51 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:51 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 36);
+2016-08-14 21:18:52 :: Clonando um produto
+2016-08-14 21:18:52 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:52 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:52 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 37);
+2016-08-14 21:18:52 :: Clonando um produto
+2016-08-14 21:18:52 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:52 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:52 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 38);
+2016-08-14 21:18:52 :: Clonando um produto
+2016-08-14 21:18:52 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:52 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:52 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 39);
+2016-08-14 21:18:53 :: Clonando um produto
+2016-08-14 21:18:53 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:18:53 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:18:53 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('Vinho Brasileiro Tinto Merlot (clonado)', '60.0', '12.0', '18.0', '13523453234234', '2016-08-14', 'N', 40);
+2016-08-14 21:27:39 :: Clonando um produto
+2016-08-14 21:27:39 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:27:39 :: SELECT MAX(id) as id FROM produto;
+2016-08-14 21:27:39 :: INSERT INTO produto (descricao, estoque, preco_custo, preco_venda, codigo_barras, data_cadastro, origem, id) VALUES ('HD 120 GB (clonado)', '20', '100', '180', '0000000002', '2015-01-01', 'N', 26);

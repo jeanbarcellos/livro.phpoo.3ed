@@ -1,0 +1,10 @@
+2016-08-14 21:55:43 :: SELECT * FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:55:43 :: SELECT count(*) FROM produto WHERE (estoque > 10 AND origem = 'N')
+2016-08-14 21:56:24 :: SELECT * FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:56:24 :: SELECT count(*) FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:56:24 :: SELECT * FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:56:24 :: SELECT count(*) FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:56:25 :: SELECT * FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:56:25 :: SELECT count(*) FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:57:02 :: SELECT * FROM produto WHERE (estoque > 10 AND origem = 'N');
+2016-08-14 21:57:02 :: SELECT count(*) FROM produto WHERE (estoque > 10 AND origem = 'N');

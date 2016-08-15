@@ -1,0 +1,10 @@
+2016-08-14 21:19:40 :: Buscando um produto
+2016-08-14 21:19:40 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:20:07 :: Buscando um produto
+2016-08-14 21:20:07 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:26:21 :: Buscando um produto
+2016-08-14 21:26:21 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:26:30 :: Buscando um produto
+2016-08-14 21:26:30 :: SELECT * FROM produto WHERE id=2;
+2016-08-14 21:26:42 :: Buscando um produto
+2016-08-14 21:26:42 :: SELECT * FROM produto WHERE id=2;
