@@ -11,7 +11,6 @@ try {
     Transaction::open('my_estoque');
 
     Transaction::setLogger(new LoggerTXT('tmp/log_find.txt'));
-
     Transaction::log('Buscando um produto');
 
     $p1 = Produto::find(2);

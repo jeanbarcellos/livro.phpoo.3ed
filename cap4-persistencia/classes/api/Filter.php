@@ -2,7 +2,8 @@
 
 /**
  * Classe TFilter
- * Provê uma interface para definição de filtros de seleção
+ * 
+ * Provê uma interface para definição de filtros de seleção.
  */
 class Filter extends Expression {
 
@@ -11,12 +12,11 @@ class Filter extends Expression {
     private $value;    // valor
 
     /**
-     * método __construct()
+     * Instancia um filtro de seleção.
      * @param $variable = variável
      * @param $operator = operador (>,<)
      * @param $value    = valor a ser comparado
      */
-
     public function __construct($variable, $operator, $value) {
         // armazena as propriedades
         $this->variable = $variable;
@@ -28,8 +28,7 @@ class Filter extends Expression {
     }
 
     /**
-     * método transform()
-     * recebe um valor e faz as modificações necessárias
+     * Recebe um valor e faz as modificações necessárias
      * para ele ser interpretado pelo banco de dados
      * podendo ser um integer/string/boolean ou array.
      * @param $value = valor a ser transformado
@@ -69,8 +68,7 @@ class Filter extends Expression {
     }
 
     /**
-     * método dump()
-     * retorna o filtro em forma de expressão
+     * Retorna o filtro em forma de expressão
      */
     public function dump() {
         // concatena a expressão

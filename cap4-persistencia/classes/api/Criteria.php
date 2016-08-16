@@ -16,8 +16,7 @@ class Criteria extends Expression {
     }
 
     /**
-     * método add()
-     * adiciona uma expressão ao critério
+     * Adiciona uma expressão ao critério
      * @param $expression = expressão (Objeto Expression)
      * @param $operator   = operador lógico de comparação
      */
@@ -33,11 +32,10 @@ class Criteria extends Expression {
     }
 
     /**
-     * método dump()
-     * retorna a expressão final
+     * Retorna a expressão final
      */
     public function dump() {
-        // concatena a lista de expressões (filtros/critérios)
+        // Cconcatena a lista de expressões (filtros/critérios)
         // Verifica se a variável é um array
         if (is_array($this->expressions)) {
 
@@ -60,8 +58,7 @@ class Criteria extends Expression {
     }
 
     /**
-     * método setProperty()
-     * define o valor de uma propriedade
+     * Define o valor de uma propriedade
      * @param $property = propriedade
      * @param $value    = valor
      */
@@ -74,8 +71,7 @@ class Criteria extends Expression {
     }
 
     /**
-     * método getProperty()
-     * retorna o valor de uma propriedade
+     * Retorna o valor de uma propriedade
      * @param $property = propriedade
      */
     public function getProperty($property) {

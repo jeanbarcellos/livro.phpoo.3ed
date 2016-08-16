@@ -1,25 +1,25 @@
 <?php
 
 /**
- * classe Connection
- * gerencia conexões com bancos de dados através de arquivos de configuração.
+ * Classe Connection
+ * 
+ * Gerencia conexões com bancos de dados através de arquivos de configuração.
  */
 final class Connection {
 
     /**
-     * método __construct()
-     * não existirão instâncias de Connection, por isto estamos marcando-o como private
+     * Não existirão instâncias de Connection
      */
     private function __construct() {
         
     }
 
     /**
-     * método open()
-     * recebe o nome do banco de dados e instancia o objeto PDO correspondente
-     * @param $name = nome do arquivo de configurações
+     * Recebe o nome do banco de dados e instancia o objeto PDO correspondente
+     * @param String $name Nome do arquivo de configurações
+     * @return Object Objeto PDO
      */
-    public static function open($name) {
+    public static function open($name = 'default') {
 
         // verifica se existe arquivo de configuração para este banco de dados
         if (file_exists("config/{$name}.ini")) {

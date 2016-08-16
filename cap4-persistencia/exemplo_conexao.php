@@ -5,6 +5,9 @@ require_once 'classes/api/Connection.php';
 
 try {
     $conn = Connection::open('estoque');
+   
+#    var_dump($conn);die;
+    
     Produto::setConnection($conn);
 
     $pro = new Produto;

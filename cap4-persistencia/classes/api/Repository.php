@@ -11,7 +11,7 @@ final class Repository {
 
     /**
      * Instancia um Repositório de objetos
-     * @param $class = Classe dos Objetos
+     * @param string $class Classe dos Objetos
      */
     function __construct($class) {
         $this->activeRecord = $class;
@@ -19,8 +19,9 @@ final class Repository {
 
     /**
      * Recupera um conjunto de objetos (collection) da base de dados
-     * através de um critério de seleção, e instanciá-los em memória
+     * através de um critério de seleção, e instanciá-los em memória.
      * @param $criteria = objeto do tipo Criteria
+     * @return Array Array de objetos
      */
     function load(Criteria $criteria) {
         
@@ -79,7 +80,7 @@ final class Repository {
     }
 
     /**
-     * Excluir um conjunto de objetos (collection) da base de dados
+     * Exclui um conjunto de objetos (collection) da base de dados
      * através de um critério de seleção.
      * @param $criteria = objeto do tipo Criteria
      */

@@ -28,7 +28,7 @@ try {
     $repository = new Repository('Produto');
     
     // carrega os objetos, conforme o critério 
-    $produtos = $repository->load($criteria);
+    $produtos = $repository->load($criteria);    
     if ($produtos) {
         echo "Produtos <br>\n";
         // percorre todas objetos 

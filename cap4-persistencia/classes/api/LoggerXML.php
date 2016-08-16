@@ -1,14 +1,14 @@
 <?php
 
 /**
- * classe LoggerXML
- * implementa o algoritmo de LOG em XML
+ * Classe LoggerXML
+ * 
+ * Implementa o algoritmo de LOG em XML
  */
 class LoggerXML extends Logger {
 
     /**
-     * método write()
-     * escreve uma mensagem no arquivo de LOG
+     * Escreve uma mensagem no arquivo de LOG
      * @param $message = mensagem a ser escrita
      */
     public function write($message) {

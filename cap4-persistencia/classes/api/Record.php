@@ -3,16 +3,19 @@
 /**
  * Classe Record
  *
- * Pprovê os métodos necessários para persistir e
+ * Provê os métodos necessários para persistir e
  * recuperar objetos da base de dados (Active Record)
  */
 abstract class Record {
 
-    protected $data; // array contendo os dados do objeto
+    /**
+     * Array contendo os dados do objeto.
+     * @var array 
+     */
+    protected $data;
 
     /**
-     *  método __construct()
-     * instancia um Active Record. Se passado o $id, já carrega o objeto
+     * Instancia um Active Record. Se passado o $id, já carrega o objeto
      * @param $id = ID do objeto
      */
     public function __construct($id = NULL) {
@@ -27,17 +30,15 @@ abstract class Record {
     }
 
     /**
-     * método __clone()
-     * executado quando o objeto for clonado.
-     * limpa o ID para que seja gerado um novo ID para o clone.
+     * Executado quando o objeto for clonado.
+     * Limpa o ID para que seja gerado um novo ID para o clone.
      */
     public function __clone() {
         unset($this->data['id']);
     }
 
     /**
-     * método __set()
-     * executado sempre que uma propriedade for atribuída.
+     * Executado sempre que uma propriedade for atribuída.
      */
     public function __set($prop, $value) {
         // verifica se existe método set_<propriedade>
@@ -54,8 +55,7 @@ abstract class Record {
     }
 
     /**
-     * método __get()
-     * executado sempre que uma propriedade for requerida
+     * Executado sempre que uma propriedade for requerida
      */
     public function __get($prop) {
         if (method_exists($this, 'get_' . $prop)) {
@@ -69,16 +69,14 @@ abstract class Record {
     }
 
     /**
-     * método __isset()
-     * executado sempre que se testar a presença de um valor no objeto
+     * Executado sempre que se testar a presença de um valor no objeto
      */
     public function __isset($prop) {
         return isset($this->data[$prop]);
     }
 
     /**
-     * método getEntity()
-     * retorna o nome da entidade (tabela)
+     * Retorna o nome da entidade (tabela)
      */
     private function getEntity() {
         // obtém o nome da classe
@@ -89,39 +87,36 @@ abstract class Record {
     }
 
     /**
-     * método fromArray
-     * preenche os dados do objeto com um array
+     * Preenche os dados do objeto com um array
      */
     public function fromArray($data) {
         $this->data = $data;
     }
 
     /**
-     * método toArray
-     * retorna os dados do objeto como array
+     * Retorna os dados do objeto como array
      */
     public function toArray() {
         return $this->data;
     }
 
     /**
-     * método store()
-     * 
-     * armazena o objeto na base de dados e retorna
+     * Armazena o objeto na base de dados e retorna
      * o número de linhas afetadas pela instrução SQL (zero ou um)
      */
     public function store() {
+        // Prepara os dados antes de serem inseridos na base de dados
         $prepared = $this->prepare($this->data);
 
         // verifica se tem ID ou se existe na base de dados
-        if (empty($this->data['id']) or ( !$this->load($this->id))) {
+        if (empty($this->data['id']) or (!$this->load($this->id))) {
             // incrementa o ID
             if (empty($this->data['id'])) {
                 $this->id = $this->getLast() + 1;
                 $prepared['id'] = $this->id;
             }
 
-            // cria uma instrução de INSERT
+            // Cria uma instrução de INSERT
             $sql  = "INSERT INTO {$this->getEntity()} ";
             $sql .= "(" . implode(', ', array_keys($prepared)) . ")";
             $sql .= " VALUES ";
@@ -129,7 +124,7 @@ abstract class Record {
             
         } else {
             
-            // monta a string de UPDATE
+            // Cria uma instrução de UPDATE
             $sql  = "UPDATE {$this->getEntity()}";
             // monta os pares: coluna=valor,...
             if ($prepared) {
@@ -160,10 +155,9 @@ abstract class Record {
     }
 
     /**
-     * método load()
-     * recupera (retorna) um objeto da base de dados
+     * Recupera (retorna) um objeto da base de dados
      * através de seu ID e instancia ele na memória
-     * @param $id = ID do objeto
+     * @param int $id ID do objeto
      */
     public function load($id) {
         
@@ -192,15 +186,14 @@ abstract class Record {
     }
 
     /**
-     * método delete()
-     * exclui um objeto da base de dados através de seu ID.
-     * @param $id = ID do objeto
+     * Exclui um objeto da base de dados através de seu ID.
+     * @param int $id ID do objeto
      */
     public function delete($id = NULL) {
         // o ID é o parâmetro ou a propriedade ID
         $id = $id ? $id : $this->id;
 
-        // monsta a string de UPDATE
+        // monsta a string de DELETE
         $sql  = "DELETE FROM {$this->getEntity()}";
         $sql .= " WHERE id=" . (int) $this->data['id'] . ";";
 
@@ -221,8 +214,7 @@ abstract class Record {
     }
 
     /**
-     * método getLast()
-     * retorna o último ID
+     * Retorna o último ID
      */
     private function getLast() {
         // inicia transação
@@ -256,8 +248,7 @@ abstract class Record {
     }
 
     /**
-     * método find()
-     * Será utilizado para buscarmos um objeto a partir da base de dados.
+     * Será utilizado para buscarmos um objeto a partir da base de dados.<br>
      * Ele na verdade é só um atalho para o método load(), com a facilidade
      * de ser executado estaticamente.
      * @param $id = ID do objeto
@@ -270,8 +261,8 @@ abstract class Record {
 
     /**
      * Função prepare()
-     * Prepara os dados antes de serem inseridos na base de dados.
-     * Para tal, percorre o array $data, testando cada um dos valores presentes.
+     * Prepara os dados antes de serem inseridos na base de dados.<br>
+     * Para tal, percorre o array $data, testando cada um dos valores presentes.<br>
      * O Resultado desta transformação é outro array $prepared
      * que é utilizado para montarmos a instrução SQL.
      * @param mixed $data Array $data
@@ -288,12 +279,11 @@ abstract class Record {
     }
 
     /**
-     * Função scape()
      * Recebeum valor e formata-o conforme o seu tipo.
      * @param type $value
      */   
     public function escape($value) {
-        // verifica se o dado é uma string e se não está fazia
+        // verifica se o dado é uma string e se não está vazia
         if (is_string($value) and ( !empty($value))) {
             // adiciona \ em aspas
             $value = addslashes($value);

@@ -1,8 +1,9 @@
 <?php
 
 /**
- * classe Expression
- * classe abstrata para gerenciar expressões
+ * Classe Expression
+ * 
+ * Classe abstrata para gerenciar expressões
  */
 abstract class Expression {
 

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * classe LoggerHTML
- * implementa o algoritmo de LOG em HTML
+ * Classe LoggerHTML
+ * 
+ * Implementa o algoritmo de LOG em HTML
  */
 class LoggerHTML extends Logger {
 
     /**
-     * método write()
-     * escreve uma mensagem no arquivo de LOG
+     * Escreve uma mensagem no arquivo de LOG
      * @param $message = mensagem a ser escrita
      */
     public function write($message) {
