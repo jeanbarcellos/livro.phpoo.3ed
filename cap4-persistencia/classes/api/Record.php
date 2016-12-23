@@ -10,10 +10,11 @@ abstract class Record {
 
     /**
      * Array contendo os dados do objeto.
-     * @var array 
+     * @var array
      */
     protected $data;
 
+    
     /**
      * Instancia um Active Record. Se passado o $id, já carrega o objeto
      * @param $id = ID do objeto
@@ -29,6 +30,7 @@ abstract class Record {
         }
     }
 
+    
     /**
      * Executado quando o objeto for clonado.
      * Limpa o ID para que seja gerado um novo ID para o clone.
@@ -75,6 +77,7 @@ abstract class Record {
         return isset($this->data[$prop]);
     }
 
+    
     /**
      * Retorna o nome da entidade (tabela)
      */
@@ -86,6 +89,7 @@ abstract class Record {
         return constant("{$class}::TABLENAME");
     }
 
+    
     /**
      * Preenche os dados do objeto com um array
      */
@@ -95,21 +99,27 @@ abstract class Record {
 
     /**
      * Retorna os dados do objeto como array
+     *
+     * @return array
      */
     public function toArray() {
         return $this->data;
     }
 
+    
     /**
      * Armazena o objeto na base de dados e retorna
      * o número de linhas afetadas pela instrução SQL (zero ou um)
+     *
+     * @return type
+     * @throws Exception
      */
     public function store() {
         // Prepara os dados antes de serem inseridos na base de dados
         $prepared = $this->prepare($this->data);
 
         // verifica se tem ID ou se existe na base de dados
-        if (empty($this->data['id']) or (!$this->load($this->id))) {
+        if (empty($this->data['id']) or ( !$this->load($this->id))) {
             // incrementa o ID
             if (empty($this->data['id'])) {
                 $this->id = $this->getLast() + 1;
@@ -117,15 +127,14 @@ abstract class Record {
             }
 
             // Cria uma instrução de INSERT
-            $sql  = "INSERT INTO {$this->getEntity()} ";
+            $sql = "INSERT INTO {$this->getEntity()} ";
             $sql .= "(" . implode(', ', array_keys($prepared)) . ")";
             $sql .= " VALUES ";
             $sql .= "(" . implode(', ', array_values($prepared)) . ");";
-            
         } else {
-            
+
             // Cria uma instrução de UPDATE
-            $sql  = "UPDATE {$this->getEntity()}";
+            $sql = "UPDATE {$this->getEntity()}";
             // monta os pares: coluna=valor,...
             if ($prepared) {
                 foreach ($prepared as $column => $value) {
@@ -142,10 +151,10 @@ abstract class Record {
         if ($conn = Transaction::get()) {
             // faz o log ...
             Transaction::log($sql);
-            
+
             // e executa o SQL
             $result = $conn->exec($sql);
-            
+
             // retorna o resultado
             return $result;
         } else {
@@ -157,19 +166,22 @@ abstract class Record {
     /**
      * Recupera (retorna) um objeto da base de dados
      * através de seu ID e instancia ele na memória
+     *
      * @param int $id ID do objeto
+     * @return type
+     * @throws Exception
      */
     public function load($id) {
-        
+
         // monta instrução de SELECT
-        $sql  = "SELECT * FROM {$this->getEntity()}";
+        $sql = "SELECT * FROM {$this->getEntity()}";
         $sql .= " WHERE id=" . (int) $id . ";";
 
         // obtém transação ativa
         if ($conn = Transaction::get()) {
             // cria mensagem de log
             Transaction::log($sql);
-            
+
             // e executa a consulta
             $result = $conn->query($sql);
 
@@ -194,43 +206,44 @@ abstract class Record {
         $id = $id ? $id : $this->id;
 
         // monsta a string de DELETE
-        $sql  = "DELETE FROM {$this->getEntity()}";
+        $sql = "DELETE FROM {$this->getEntity()}";
         $sql .= " WHERE id=" . (int) $this->data['id'] . ";";
 
         // obtém transação ativa
         if ($conn = Transaction::get()) {
-            // faz o log 
+            // faz o log
             Transaction::log($sql);
-            
+
             // e executa o SQL
             $result = $conn->exec($sql);
-            
+
             // retorna o resultado
-            return $result; 
+            return $result;
         } else {
             // se não houver transação, retorna uma exceção
             throw new Exception('Não há transação ativa!!');
         }
     }
 
+    
     /**
      * Retorna o último ID
      */
     private function getLast() {
         // inicia transação
         if ($conn = Transaction::get()) {
-            
+
             // monta a instrução de SELECT
             $sql = "SELECT MAX(id) as id FROM {$this->getEntity()};";
 
             // cria log
             Transaction::log($sql);
-            
+
             // executa instrução SQL
             $result = $conn->query($sql);
 
             // retorna os dados do banco
-            $row = $result->fetch();            
+            $row = $result->fetch();
             return $row[0];
         } else {
             // se não houver transação, retorna uma exceção
@@ -238,8 +251,11 @@ abstract class Record {
         }
     }
 
+    
     /**
-     * 
+     * Retorna todos os dados
+     *
+     * @return type
      */
     public static function all() {
         $classname = get_called_class();
@@ -251,21 +267,25 @@ abstract class Record {
      * Será utilizado para buscarmos um objeto a partir da base de dados.<br>
      * Ele na verdade é só um atalho para o método load(), com a facilidade
      * de ser executado estaticamente.
+     *
      * @param $id = ID do objeto
+     * @return type
      */
     public static function find($id) {
-        $classname = get_called_class();
+        echo $classname = get_called_class();
         $ar = new $classname;
         return $ar->load($id);
     }
 
+    
     /**
-     * Função prepare()
      * Prepara os dados antes de serem inseridos na base de dados.<br>
      * Para tal, percorre o array $data, testando cada um dos valores presentes.<br>
      * O Resultado desta transformação é outro array $prepared
      * que é utilizado para montarmos a instrução SQL.
+     * 
      * @param mixed $data Array $data
+     * @return type
      */
     public function prepare($data) {
         $prepared = array();
@@ -281,7 +301,7 @@ abstract class Record {
     /**
      * Recebeum valor e formata-o conforme o seu tipo.
      * @param type $value
-     */   
+     */
     public function escape($value) {
         // verifica se o dado é uma string e se não está vazia
         if (is_string($value) and ( !empty($value))) {
@@ -289,7 +309,7 @@ abstract class Record {
             $value = addslashes($value);
             // caso seja uma string
             return "'$value'";
-         // verifica se o dado é um boolean
+            // verifica se o dado é um boolean
         } else if (is_bool($value)) {
             // caso seja um boolean
             return $value ? 'TRUE' : 'FALSE';

@@ -1,19 +1,22 @@
-<?php 
+<?php
 
 $path = ".";
-        
+
 $diretorio = dir($path);
 
 echo "<ul>";
 
 while ($arquivo = $diretorio->read()) {
-    
-    if($arquivo != "." ) {       
+
+    if ($arquivo != ".") {
         echo "<li><a href='" . $arquivo . "'>" . $arquivo . "</a></li>";
     }
-} 
+}
 
 echo "<ul>";
 
 $diretorio->close();
 
+
+
+//teste teste teste

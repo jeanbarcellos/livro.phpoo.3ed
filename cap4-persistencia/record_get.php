@@ -13,11 +13,12 @@ try {
     Transaction::setLogger(new LoggerTXT('tmp/log_find.txt'));
     Transaction::log('Buscando um produto');
 
-    $p1 = Produto::find(2);
+    $p1 = Produto::find(1);
     var_dump($p1);
 //    echo $p1->descricao;
 
     Transaction::close();
+    
 } catch (Exception $e) {
     Transaction::rollback();
     print $e->getMessage();

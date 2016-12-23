@@ -11,8 +11,9 @@ final class Transaction {
     private static $logger; // logger
 
     /**
-     * Não existirão instâncias de Transaction
+     * Não existirão instâncias de Connection
      */
+
     private function __construct() {
         
     }
@@ -22,14 +23,15 @@ final class Transaction {
      * @param String $database Nome do banco de dados
      */
     public static function open($database = 'default') {
+
         // Verifica se há conexão
         if (empty(self::$conn)) {
             // abre uma conexão e armazena na propriedade estática $conn
             self::$conn = Connection::open($database);
-            
+
             // inicia a transação
             self::$conn->beginTransaction();
-            
+
             // inicia a estratégia de log como nula
             self::$logger = NULL;
         }
@@ -45,7 +47,7 @@ final class Transaction {
     /**
      * Desfaz todas operações realizadas na transação e fecha a conexão
      */
-    public static function rollback() {        
+    public static function rollback() {
         if (self::$conn) {
             self::$conn->rollback(); // desfaz as operações realizadas
             self::$conn = NULL; // fecha a conexão

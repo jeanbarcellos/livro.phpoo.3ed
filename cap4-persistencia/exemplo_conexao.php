@@ -5,9 +5,9 @@ require_once 'classes/api/Connection.php';
 
 try {
     $conn = Connection::open('estoque');
-   
-#    var_dump($conn);die;
-    
+
+    var_dump($conn);die;
+
     Produto::setConnection($conn);
 
     $pro = new Produto;
@@ -19,6 +19,7 @@ try {
     $pro->data_cadastro = date('Y-m-d');
     $pro->origem = 'N';
     $pro->save();
+    
 } catch (Exception $e) {
     print $e->getMessage();
 }

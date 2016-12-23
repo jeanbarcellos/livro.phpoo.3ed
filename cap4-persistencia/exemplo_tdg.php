@@ -23,7 +23,7 @@ $data2->origem = 'I';
 try {
     $conn = new PDO('sqlite:database/estoque.db');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+
     ProdutoGateway::setConnection($conn);
 
     $gw = new ProdutoGateway;
@@ -37,7 +37,6 @@ try {
     foreach ($gw->all("estoque<=10") as $produto) {
         print $produto->descricao . "<br>\n";
     }
-    
 } catch (Exception $e) {
     print $e->getMessage();
 }

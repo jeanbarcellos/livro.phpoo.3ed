@@ -16,16 +16,17 @@ final class Connection {
 
     /**
      * Recebe o nome do banco de dados e instancia o objeto PDO correspondente
-     * @param String $name Nome do arquivo de configurações
+     * 
+     * @param String $arquivo Nome do arquivo de configurações
      * @return Object Objeto PDO
      */
-    public static function open($name = 'default') {
+    public static function open($arquivo = 'default') {
 
         // verifica se existe arquivo de configuração para este banco de dados
-        if (file_exists("config/{$name}.ini")) {
-            $db = parse_ini_file("config/{$name}.ini");
+        if (file_exists("config/{$arquivo}.ini")) {
+            $db = parse_ini_file("config/{$arquivo}.ini");
         } else {
-            throw new Exception("Arquivo '$name' não encontrado");
+            throw new Exception("Arquivo '$arquivo' não encontrado");
         }
 
         // lê as informações contidas no arquivo
@@ -62,7 +63,7 @@ final class Connection {
 
         // define para que o PDO lance exceções na ocorrência de erros
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
+
         // retorna o objeto PDO instanciado.
         return $conn;
     }

@@ -3,6 +3,7 @@
 require_once 'classes/ar/Produto.php';
 
 try {
+
     $conn = new PDO('sqlite:database/estoque.db');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -38,6 +39,7 @@ try {
     print 'Margem de lucro: ' . $p3->getMargemLucro() . "% <br>\n";
     $p3->registraCompra(14, 5);
     $p3->save();
+    
 } catch (Exception $e) {
     print $e->getMessage();
 }

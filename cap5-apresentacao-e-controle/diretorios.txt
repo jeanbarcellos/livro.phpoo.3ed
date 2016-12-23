@@ -1,0 +1,23 @@
+/App - Classes específicas (modelo, visualização, controle) da aplicação que estão sendo construída
+    /Config - Arquivos de configuração da aplicação
+    /Control - Classes de controle da aplicação
+    /Database - Eventualmente conterá bases de dados, como aquelas em SQLite
+    /Imagens - Imagens específicas da aplicação
+    /Model - Conterá classes de modelo da aplicação
+    /Resources - Recursos externos, como fragmentos de arquivos HTML utilizados na montagem de interfaces(telas)
+    /Servies - Classes que formaram serviços, como aqueles voltados para Web Services
+    /Templates - Templates HTML que formação o layout da aplicação
+
+/Lib - Framework (Classes comuns que poderão serem reaproveitadas para construir novas aplicações
+    /Livro - Fornecedor do Framwork (EquipeDigital.com ou nti)
+        /Control - Classes que interpretarão ações e gerenciarão o fluxo de controle
+        /Core - Classes que serão responsáveis pela carga das demais classes da aplicação
+        /Database - Classes responsáveis pela persistência de dados
+        /Log - Classes de Logs
+        /Session - Classes de Manipulaçao de Sessões
+        /Traits - Traits que poderão ser reaproveitados em diferentes contextos
+        /Validation - Classes de validação de dados
+        /Widget - Componentes utiliados para montagem de interfaces, como formulários e Datagrids
+    /Twig - (Classe externa) biblioteca de templates
+
+

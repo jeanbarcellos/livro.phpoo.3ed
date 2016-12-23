@@ -26,10 +26,10 @@ try {
 
     // cria o repositório 
     $repository = new Repository('Produto');
-    
+
     // exclui os objetos, conforme o critério 
     $repository->delete($criteria);
-    
+
     Transaction::close(); // fecha a transação 
 } catch (Exception $e) {
     echo $e->getMessage();

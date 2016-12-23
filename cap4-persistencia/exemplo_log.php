@@ -8,6 +8,7 @@ require_once 'classes/api/LoggerTXT.php';
 
 try {
     Transaction::open('estoque');
+    
     Transaction::setLogger(new LoggerTXT('tmp/log.txt'));
     Transaction::log('Inserindo produto novo');
 

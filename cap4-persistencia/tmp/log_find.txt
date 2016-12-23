@@ -2,3 +2,37 @@
 2016-08-16 09:35:20 :: SELECT * FROM produto WHERE id=2;
 2016-08-16 09:35:21 :: Buscando um produto
 2016-08-16 09:35:21 :: SELECT * FROM produto WHERE id=2;
+2016-12-20 22:33:08 :: Buscando um produto
+2016-12-20 22:33:08 :: SELECT * FROM produto WHERE id=2;
+2016-12-20 22:33:17 :: Buscando um produto
+2016-12-20 22:33:17 :: SELECT * FROM produto WHERE id=2;
+2016-12-20 22:33:23 :: Buscando um produto
+2016-12-20 22:33:23 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:33:57 :: Buscando um produto
+2016-12-20 22:33:57 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:38:29 :: Buscando um produto
+2016-12-20 22:38:29 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:52:56 :: Buscando um produto
+2016-12-20 22:52:56 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:53:05 :: Buscando um produto
+2016-12-20 22:53:05 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:53:05 :: Buscando um produto
+2016-12-20 22:53:05 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:53:07 :: Buscando um produto
+2016-12-20 22:53:07 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:53:12 :: Buscando um produto
+2016-12-20 22:53:12 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:53:51 :: Buscando um produto
+2016-12-20 22:53:51 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:54:23 :: Buscando um produto
+2016-12-20 22:54:23 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:54:25 :: Buscando um produto
+2016-12-20 22:54:25 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:54:41 :: Buscando um produto
+2016-12-20 22:54:41 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:54:48 :: Buscando um produto
+2016-12-20 22:54:48 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:56:06 :: Buscando um produto
+2016-12-20 22:56:06 :: SELECT * FROM produto WHERE id=1;
+2016-12-20 22:56:49 :: Buscando um produto
+2016-12-20 22:56:49 :: SELECT * FROM produto WHERE id=1;

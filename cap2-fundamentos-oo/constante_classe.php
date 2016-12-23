@@ -17,7 +17,7 @@ class Pessoa {
     }
 
     public function getNomeGenero() {
-        return self::GENEROS[$this->genero];
+//        return self::GENEROS[$this->genero];
     }
 
 }
