@@ -4,6 +4,7 @@ namespace Livro\Database;
 
 /**
  * Permite definição de critérios
+ * 
  * @author Pablo Dall'Oglio
  */
 class Criteria extends Expression {
@@ -23,6 +24,7 @@ class Criteria extends Expression {
 
     /**
      * Adiciona uma expressão ao critério
+     * 
      * @param $expression = expressão (objeto Expression)
      * @param $operator   = operador lógico de comparação
      */
@@ -58,6 +60,7 @@ class Criteria extends Expression {
 
     /**
      * Define o valor de uma propriedade
+     * 
      * @param $property = propriedade
      * @param $value    = valor
      */

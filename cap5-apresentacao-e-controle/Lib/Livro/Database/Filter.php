@@ -14,6 +14,7 @@ class Filter extends Expression {
 
     /**
      * Instancia um novo filtro
+     * 
      * @param $variable = variável
      * @param $operator = operador (>,<)
      * @param $value      = valor a ser comparado
@@ -31,7 +32,8 @@ class Filter extends Expression {
 
     /**
      * Recebe um valor e faz as modificações necessárias
-     *   para ele ser interpretado pelo banco de dados
+     * para ele ser interpretado pelo banco de dados
+     * 
      * @param $value = valor a ser transformado
      */
     private function transform($value) {

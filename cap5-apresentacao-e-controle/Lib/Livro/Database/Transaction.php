@@ -24,6 +24,7 @@ final class Transaction {
 
     /**
      * Abre uma transação e uma conexão ao BD
+     * 
      * @param $database = nome do banco de dados
      */
     public static function open($database) {

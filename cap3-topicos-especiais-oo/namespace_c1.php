@@ -3,7 +3,6 @@
 namespace Library\Widgets;
 
 use Library\Container\Table; // b1
-
 use SplFileInfo;
 
 class Form {

@@ -82,6 +82,7 @@ class Datagrid extends Table {
 
                 $celula = new Element('th');
                 $celula->add($label);
+                
                 // adiciona a célula com a coluna
                 $row->add($celula);
                 $celula->align = $align;

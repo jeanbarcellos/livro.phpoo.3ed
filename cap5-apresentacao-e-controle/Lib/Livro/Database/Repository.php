@@ -6,6 +6,7 @@ use Exception;
 
 /**
  * Manipular coleções de objetos.
+ * 
  * @author Pablo Dall'Oglio
  */
 final class Repository {
@@ -14,6 +15,7 @@ final class Repository {
 
     /**
      * Instancia um Repositório de objetos
+     * 
      * @param $class = Classe dos Objetos
      */
 
@@ -23,6 +25,7 @@ final class Repository {
 
     /**
      * Carrega um conjunto de objetos (collection) da base de dados
+     * 
      * @param $criteria = objeto do tipo TCriteria
      */
     function load(Criteria $criteria) {
@@ -78,6 +81,7 @@ final class Repository {
 
     /**
      * Excluir um conjunto de objetos (collection) da base de dados
+     * 
      * @param $criteria = objeto do tipo Criteria
      */
     function delete(Criteria $criteria) {
@@ -103,6 +107,7 @@ final class Repository {
     /**
      * Retorna a quantidade de objetos da base de dados
      * que satisfazem um determinado critério de seleção.
+     * 
      * @param $criteria = objeto do tipo TCriteria
      */
     function count(Criteria $criteria) {
