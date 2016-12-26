@@ -30,6 +30,7 @@ class Session {
 
     /**
      * Retorna uma variável da seção
+     * 
      * @param $var Nome da variável
      */
     public static function getValue($var) {

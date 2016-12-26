@@ -13,6 +13,7 @@ trait SaveTrait {
      */
     function onSave() {
         try {
+
             Transaction::open($this->connection);
 
             $class = $this->activeRecord;
@@ -23,7 +24,9 @@ trait SaveTrait {
             $object->store(); // armazena o objeto
 
             Transaction::close(); // finaliza a transação
+            
             new Message('info', 'Dados armazenados com sucesso');
+            
         } catch (Exception $e) {
             new Message('error', $e->getMessage());
         }
