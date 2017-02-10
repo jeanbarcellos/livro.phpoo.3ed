@@ -114,6 +114,8 @@ abstract class Record implements RecordInterface {
 
         // verifica se tem ID ou se existe na base de dados
         if (empty($this->data['id']) or ( !$this->load($this->id))) {
+            
+            
             // incrementa o ID
             if (empty($this->data['id'])) {
                 $this->id = $this->getLast() + 1;

@@ -2,9 +2,9 @@
 
 // Lib loader
 require_once 'Lib/Livro/Core/ClassLoader.php';
-$al = new Livro\Core\ClassLoader;
-$al->addNamespace('Livro', 'Lib/Livro');
-$al->register();
+$cl = new Livro\Core\ClassLoader;
+$cl->addNamespace('Livro', 'Lib/Livro');
+$cl->register();
 
 // App loader
 require_once 'Lib/Livro/Core/AppLoader.php';

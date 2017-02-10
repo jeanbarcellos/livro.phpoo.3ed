@@ -24,15 +24,21 @@ if ($_GET) {
     if (class_exists($class)) {
         try {
             $pagina = new $class;
-            ob_start();
-            $pagina->show();
-            $content = ob_get_contents();
-            ob_end_clean();
+
+            ob_start(); // Inicia controle de output
+
+            $pagina->show(); // Exibe a página
+
+            $content = ob_get_contents(); // Lê o conteúdo gerado
+
+            ob_end_clean(); // Finaliza o controle de output
         } catch (Exception $e) {
             $content = $e->getMessage() . '<br>' . $e->getTraceAsString();
         }
     }
 }
+
+$output = $content;
 $output = str_replace('{content}', $content, $template);
 $output = str_replace('{class}', $class, $output);
 

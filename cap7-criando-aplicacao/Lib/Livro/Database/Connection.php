@@ -65,8 +65,10 @@ final class Connection
                 $conn = new PDO("mssql:host={$host},1433;dbname={$name}", $user, $pass);
                 break;
         }
+        
         // define para que o PDO lance exceções na ocorrência de erros
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
         return $conn;
     }
 }

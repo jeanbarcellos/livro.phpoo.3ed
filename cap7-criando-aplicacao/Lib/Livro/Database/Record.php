@@ -8,7 +8,8 @@ use Exception;
  * Permite definir um Active Record
  * @author Pablo Dall'Oglio
  */
-abstract class Record implements RecordInterface {
+abstract class Record implements RecordInterface
+{
 
     protected $data; // array contendo os dados do objeto
 
@@ -17,7 +18,8 @@ abstract class Record implements RecordInterface {
      * @param [$id] = ID do objeto
      */
 
-    public function __construct($id = NULL) {
+    public function __construct($id = NULL)
+    {
         if ($id) { // se o ID for informado
             // carrega o objeto correspondente
             $object = $this->load($id);
@@ -30,14 +32,16 @@ abstract class Record implements RecordInterface {
     /**
      * Limpa o ID para que seja gerado um novo ID para o clone.
      */
-    public function __clone() {
+    public function __clone()
+    {
         unset($this->data['id']);
     }
 
     /**
      * Executado sempre que uma propriedade for atribuída.
      */
-    public function __set($prop, $value) {
+    public function __set($prop, $value)
+    {
         // verifica se existe método set_<propriedade>
         if (method_exists($this, 'set_' . $prop)) {
             // executa o método set_<propriedade>
@@ -55,7 +59,8 @@ abstract class Record implements RecordInterface {
     /**
      * Executado sempre que uma propriedade for requerida
      */
-    public function __get($prop) {
+    public function __get($prop)
+    {
         // verifica se existe método get_<propriedade>
         if (method_exists($this, 'get_' . $prop)) {
             // executa o método get_<propriedade>
@@ -71,14 +76,16 @@ abstract class Record implements RecordInterface {
     /**
      * Retorna se a propriedade está definida
      */
-    public function __isset($prop) {
+    public function __isset($prop)
+    {
         return isset($this->data[$prop]);
     }
 
     /**
      * Retorna o nome da entidade (tabela)
      */
-    private function getEntity() {
+    private function getEntity()
+    {
         // obtém o nome da classe
         $class = get_class($this);
 
@@ -89,21 +96,24 @@ abstract class Record implements RecordInterface {
     /**
      * Preenche os dados do objeto com um array
      */
-    public function fromArray($data) {
+    public function fromArray($data)
+    {
         $this->data = $data;
     }
 
     /**
      * Retorna os dados do objeto como array
      */
-    public function toArray() {
+    public function toArray()
+    {
         return $this->data;
     }
 
     /**
      * Armazena o objeto na base de dados
      */
-    public function store() {
+    public function store()
+    {
         $prepared = $this->prepare($this->data);
 
         // verifica se tem ID ou se existe na base de dados
@@ -152,7 +162,8 @@ abstract class Record implements RecordInterface {
      * @param $id = ID do objeto
      */
 
-    public function load($id) {
+    public function load($id)
+    {
         // instancia instrução de SELECT
         $sql = "SELECT * FROM {$this->getEntity()}";
         $sql .= ' WHERE id=' . (int) $id;
@@ -179,7 +190,8 @@ abstract class Record implements RecordInterface {
      * Exclui um objeto da base de dados através de seu ID.
      * @param $id = ID do objeto
      */
-    public function delete($id = NULL) {
+    public function delete($id = NULL)
+    {
         // o ID é o parâmetro ou a propriedade ID
         $id = $id ? $id : $this->id;
 
@@ -203,7 +215,8 @@ abstract class Record implements RecordInterface {
     /**
      * Retorna o último ID
      */
-    private function getLast() {
+    private function getLast()
+    {
         // inicia transação
         if ($conn = Transaction::get()) {
             // instancia instrução de SELECT
@@ -225,7 +238,8 @@ abstract class Record implements RecordInterface {
     /**
      * Retorna todos objetos
      */
-    public static function all() {
+    public static function all()
+    {
         $classname = get_called_class();
         $rep = new Repository($classname);
         return $rep->load(new Criteria);
@@ -234,13 +248,15 @@ abstract class Record implements RecordInterface {
     /**
      * Busca um objeto pelo id
      */
-    public static function find($id) {
+    public static function find($id)
+    {
         $classname = get_called_class();
         $ar = new $classname;
         return $ar->load($id);
     }
 
-    public function prepare($data) {
+    public function prepare($data)
+    {
         $prepared = array();
         foreach ($data as $key => $value) {
             if (is_scalar($value)) {
@@ -250,7 +266,8 @@ abstract class Record implements RecordInterface {
         return $prepared;
     }
 
-    public function escape($value) {
+    public function escape($value)
+    {
         // verifica se é um dado escalar (string, inteiro, ...)
         if (is_scalar($value)) {
             if (is_string($value) and ( !empty($value))) {

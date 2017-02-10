@@ -5,7 +5,8 @@ use Livro\Database\Criteria;
 use Livro\Database\Repository;
 use Livro\Database\Filter;
 
-class Pessoa extends Record {
+class Pessoa extends Record
+{
 
     const TABLENAME = 'pessoa';
 
@@ -15,7 +16,8 @@ class Pessoa extends Record {
      * Retorna o nome da cidade.
      * Executado sempre se for acessada a propriedade "->nome_cidade"
      */
-    public function get_nome_cidade() {
+    public function get_nome_cidade()
+    {
         if (empty($this->cidade))
             $this->cidade = new Cidade($this->id_cidade);
 
@@ -25,7 +27,8 @@ class Pessoa extends Record {
     /**
      * Adiciona um grupo à pessoa
      */
-    public function addGrupo(Grupo $grupo) {
+    public function addGrupo(Grupo $grupo)
+    {
         $pg = new PessoaGrupo;
         $pg->id_grupo = $grupo->id;
         $pg->id_pessoa = $this->id;
@@ -35,7 +38,8 @@ class Pessoa extends Record {
     /**
      * Exclui os grupos da pessoa
      */
-    public function delGrupos() {
+    public function delGrupos()
+    {
         $criteria = new Criteria;
         $criteria->add(new Filter('id_pessoa', '=', $this->id));
 
@@ -46,7 +50,8 @@ class Pessoa extends Record {
     /**
      * Retorna os grupos da pessoa
      */
-    public function getGrupos() {
+    public function getGrupos()
+    {
         $grupos = array();
         $criteria = new Criteria;
         $criteria->add(new Filter('id_pessoa', '=', $this->id));
@@ -64,7 +69,8 @@ class Pessoa extends Record {
     /**
      * Retorna os ID's de grupos da pessoa
      */
-    public function getIdsGrupos() {
+    public function getIdsGrupos()
+    {
         $grupos_ids = array();
         $grupos = $this->getGrupos();
         if ($grupos) {
@@ -79,14 +85,16 @@ class Pessoa extends Record {
     /**
      * Retorna as contas em aberto
      */
-    public function getContasEmAberto() {
+    public function getContasEmAberto()
+    {
         return Conta::getByPessoa($this->id);
     }
 
     /**
      * Retorna o total em débitos
      */
-    public function totalDebitos() {
+    public function totalDebitos()
+    {
         return Conta::debitosPorPessoa($this->id);
     }
 

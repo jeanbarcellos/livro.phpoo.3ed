@@ -6,9 +6,9 @@ class TwigSampleControl extends Page {
 
     public function __construct() {
         parent::__construct();
-        
+
         require_once 'Lib/Twig/Autoloader.php';
-        
+
         Twig_Autoloader::register();
 
         $loader = new Twig_Loader_Filesystem('App/Resources');
@@ -23,7 +23,7 @@ class TwigSampleControl extends Page {
         $replaces['telefone'] = '(51) 1234-5678';
 
         $content = $template->render($replaces);
-        
+
         echo $content;
     }
 

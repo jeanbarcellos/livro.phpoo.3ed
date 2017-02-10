@@ -5,11 +5,13 @@ namespace Livro\Core;
 /**
  * Carrega a classe do framework
  */
-class ClassLoader {
+class ClassLoader
+{
 
     protected $prefixes = array();
 
-    public function register() {
+    public function register()
+    {
         spl_autoload_register(array($this, 'loadClass'));
     }
 
@@ -20,7 +22,8 @@ class ClassLoader {
      * @param string $base_dir
      * @param type $prepend
      */
-    public function addNamespace($prefix, $base_dir, $prepend = false) {
+    public function addNamespace($prefix, $base_dir, $prepend = false)
+    {
         // normalize namespace prefix
         $prefix = trim($prefix, '\\') . '\\';
 
@@ -40,7 +43,8 @@ class ClassLoader {
         }
     }
 
-    public function loadClass($class) {
+    public function loadClass($class)
+    {
         // the current namespace prefix
         $prefix = $class;
 
@@ -69,7 +73,8 @@ class ClassLoader {
         return false;
     }
 
-    protected function loadMappedFile($prefix, $relative_class) {
+    protected function loadMappedFile($prefix, $relative_class)
+    {
         // are there any base directories for this namespace prefix?
         if (isset($this->prefixes[$prefix]) === false) {
             return false;
@@ -96,7 +101,8 @@ class ClassLoader {
         return false;
     }
 
-    protected function requireFile($file) {
+    protected function requireFile($file)
+    {
         if (file_exists($file)) {
             require $file;
             return true;
